@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 利用 new 创建数组 (非常不推荐)
+    var arr = new Array()
+    console.log(arr, 'new Array()')
+
+    console.log(typeof arr)
+    console.log(Object.prototype.toString.call(arr))
+
+    // 2. 利用数字字面量来创建
+    var arr1 = [] // 方括号表示数组
+    
+    console.log(arr1, '[]')
+
+    var arr2 = new Array(2)
+    var arr3 = new Array('1', '2')
+    console.log(arr2, 'new Array(2)')
+    console.log(arr3, `new Array('1', '2')`)
+  </script>
+</body>
+</html>

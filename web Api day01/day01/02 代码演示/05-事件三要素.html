@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">唐伯虎</button>
+    <div></div>
+    <p></p>
+    <script>
+        // 咱们页面上 每个元素 都可以触发一些事件
+        // 事件: 触发-响应机制.
+
+        // 事件有三个要素:  谁 触发了;   触发了什么事件 ; 我们要干嘛
+
+        // 事件三要素:  
+        // 事件源  :  谁触发了这个事件
+        // 事件类型 :  触发了什么事件, 比如点击事件, 鼠标离开事件, 表单获取焦点事件.
+        // 事件处理程序  : 我们要干嘛
+
+        // 事件的处理流程, 执行事件的步骤
+
+        // 需求: 点击这个按钮, console一句话
+
+        // 1. 获取元素
+        var btn = document.querySelector('#btn')
+
+        // 2. 注册事件, 也叫绑定事件
+
+        // 注意, 咱们绑定事件的时候, 并没有触发函数内的代码.
+        // 只有当我们点击的时候, 才会执行.
+        btn.onclick = function () {
+
+            // 3. 我们要干嘛, 编写事件处理程序
+            console.log('我被点击了')
+            // alert('1')
+        }
+
+
+    </script>
+</body>
+
+</html>

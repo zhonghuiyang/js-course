@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+        .move{
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+        }
+    </style>
+<body>
+    <div>123</div>
+    <div class="box"></div>
+    <input type="text">
+    <!-- <input type="password"> -->
+    <!-- <input type="checkbox"> -->
+    <div class="move">
+
+    </div>
+    <script>
+        // 1. 获取元素
+        // 获取到第一个元素
+        var box = document.querySelector('.box')
+
+        // 2. 注册事件, 绑定事件
+        box.onmouseover = function(){
+            // 3. 编写事件处理程序
+            console.log('我进入这个盒子了')
+        }
+
+        // 鼠标离开
+        box.onmouseout = function () {
+            // 事件处理程序
+            console.log('我离开这个盒子了')
+        }
+
+
+        // 1. 获取元素
+        var input = document.querySelector('input')
+
+        // 2. 绑定事件
+        // onfocus input获取焦点
+        input.onfocus = function () {
+            console.log('我获取了焦点')
+        }
+        // 失去焦点失去
+        input.onblur = function () {
+            console.log('失去焦点')
+        }
+
+        // 获取盒子
+        var move = document.querySelector('.move')
+        // 在盒子内移动
+        move.onmousemove = function () {
+            console.log('我在这个盒子里移动')
+        }
+
+        // 获取元素 
+        // 鼠标抬起事件
+        // 1. 获取到第一个元素
+        var box = document.querySelector('.box')
+        // 2. 注册事件
+        box.onmouseup = function () {
+            // 3. 编写事件处理程序
+            console.log('鼠标抬起了')
+        }
+        box.onmousedown = function () {
+            console.log('鼠标按下了')
+        }
+
+
+
+    </script>
+</body>
+
+</html>

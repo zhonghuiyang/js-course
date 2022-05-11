@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // push 是给数组末尾添加新元素的方法
+    // 可以直接改变原数组（包括元素和长度）
+    // push执行完毕后，会返回 新数组的长度
+    var arr = [1, 2, 3]
+    console.log(arr.push(4))
+    arr.push(5, 6, 7, 8)
+    console.log(arr) // [1,2,3,4,5,6,7,8]
+
+    // pop 末尾删除
+    // pop 执行完成后，返回的是删除的那一个元素
+    // pop 一次性只能删除一个，pop()括号内不能加入任何参数
+    // 可以直接改变原数组
+    console.log('-----------------------')
+    console.log(arr.pop()) // 8
+    console.log(arr) // [1,2,3,4,5,6,7]
+    
+    // unshift 数组头部添加元素
+    // unshift 执行完毕后，会返回 新数组的长度
+    // 可以直接改变原数组（包括元素和长度）
+    console.log('---------------------')
+    console.log(arr.unshift(0))
+    console.log(arr) // [0,1,2,3,4,5,6,7]
+
+    // shift 数组头部删除元素
+    // shift 执行完成后，返回的是删除的那一个元素
+    // shift 一次性只能删除一个，shift()括号内不能添加任何参数
+    // 可以直接改变原数组
+    console.log('--------------------')
+    console.log(arr.shift())
+    console.log(arr)
+
+  </script>
+</body>
+</html>

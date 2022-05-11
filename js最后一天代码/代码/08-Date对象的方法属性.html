@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 年-getFullYear()  月getMonth()  日getDate() 周几 getDay()
+    var now = new Date()
+    console.log(now)
+    console.log(now.getFullYear())
+    console.log(now.getMonth() + 1) // getMonth返回的月份比实际时间少1个月，需要加一
+    console.log(now.getDate())
+    var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+    console.log(now.getDay()) // 0:星期天 1：周一 。。。5：周五 6：周六
+    console.log(arr[now.getDay()])
+    console.log(`${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日 ${arr[now.getDay()]}`)
+
+    // 格式化日期 时getHours() 分getMinutes() 秒getSeconds()
+    console.log(now.getHours())
+    console.log(now.getMinutes())
+    console.log(now.getSeconds())
+
+
+    // 写一下当前时间的 "??:??:??"
+    var time = new Date()
+    // 获取小时
+    var h = time.getHours()
+    if (h < 10) {
+      h = '0' + h
+      // h += '0' => h = h + '0'
+    }
+    // 获取分钟
+    var m = time.getMinutes()
+    // if (m < 10) {
+    //   m = '0' + m
+    // }
+    m = (m < 10) ? '0' + m : m
+    // 获取秒
+    var s = time.getSeconds()
+    // if (s < 10) {
+    //   s = '0' + s
+    // }
+    s = (s < 10) ? '0' + s : s
+
+    console.log(`${h}:${m}:${s}`)
+
+  </script>
+</body>
+</html>

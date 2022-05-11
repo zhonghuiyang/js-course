@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 将数组[2, 0, 6, 1, 77, 0, 52, 0, 25, 7]中的 0 去掉后，形成一个不包含 0 的新数组。
+    // 1. 筛选出不等于0的元素
+    // 2. 讲筛选出的元素放到新数组里面
+    var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7, 2, 1, 52]
+    var newArr = []
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] !== 0) {
+        newArr.push(arr[i])
+        // newArr[newArr.length] = arr[i]
+      }
+    }
+
+    console.log(newArr)
+
+    // 将数组中所有的重复元素都给去掉 (去重)
+    // 1. 遍历原数组获取每一个元素
+    // 2. 将当前循环得到的元素与newArr新数组中以及插入后的所有元素进行比较 （需要获取新数组中的所有元素）
+    // 3. 如果新数组中的所有元素与这个 当前循环得到的元素 都不相等，那么讲该元素插入进新数组中
+    var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7, 2, 1, 52]
+    var newArr = []
+    for (var i = 0; i < arr.length; i++) {
+      // arr[i]
+      var flag = false // 用布尔值确定arr当前索引下的元素在新数组中是否相等，false表示不相等，true表示新数组中有元素与当前元素相等
+      // 遍历新数组，以便让新数组中的每一个元素与原数组中的元素进行一一比较
+      for (var j = 0; j < newArr.length; j++) {
+        // newArr[j]
+        // 如果满足下面的if判断，者不插入当前arr[i]这个元素
+        if (newArr[j] === arr[i]) {
+          flag = true
+          break
+        }
+      }
+
+      // 如果标记显示为true 则不进行插入， 显示为false，则进行当前元素的插入
+      if (flag === false) { // !flag
+        newArr.push(arr[i])
+      }
+    }
+    console.log(arr)
+    console.log(newArr)
+  </script>
+</body>
+</html>

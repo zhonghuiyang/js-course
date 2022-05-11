@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr = [2, 6, 1, 77, 52, 25, 7, 99];
+    // 1. 设置一个储存最大值得变量 max
+    // 2. 将默认的max 设为数组中的第一个元素
+    var max = arr[0]
+    // 3. for循环遍历数组中的所有元素
+    for (var i = 1; i < arr.length; i++) {
+      // 用当前记录的最大值max 去和数组中的第i项进行大小的比较
+      if (max < arr[i]) {
+        max = arr[i]
+        /*
+          i = 0  arr[i] = 2  arr[0]<arr[0] => false max = 2
+          i = 1  arr[i] = 6  2<6 => true  max = 6
+          ....
+        */
+      }
+    }
+
+    console.log(max)
+
+    // 2. 高端的写法
+    var arr2 = [2, 6, 1, 77, 52, 25, 7, 99];
+    // 1. 设置一个储存最大值得变量 max
+    // 2. 将默认的max 设为数组中的第一个元素
+    var max2 = arr[0]
+    // 3. for循环遍历数组中的所有元素
+    for (var i = 1; i < arr.length; i++) {
+      max2 = Math.max(max2, arr[i])
+    }
+    console.log(max2)
+  </script>
+</body>
+</html>

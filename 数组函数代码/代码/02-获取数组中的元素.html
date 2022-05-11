@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 了解数组的元素索引
+    // 一个数组的长度 - 1， 就是这个数组最大的元素索引位置
+    // 数组的索引是从 0 开始计数的
+    var  arr = ['AK-12','AN-94','AK-15','RPK-16'];
+                  // 0     1       2       3
+    var arrLength = arr.length
+    console.log(arr)
+    console.log(arrLength)
+
+    // 2. 获取数组中特定位置的元素
+    var AK12 = arr[0]
+    var RPK16 = arr[3]
+    // 获取数组中最后一个元素
+    var lastIndex = arr[arr.length - 1]
+    console.log(AK12, RPK16 , lastIndex)
+    console.log(arr)
+
+    // var aa = arr[4] // undefined
+    arr[4] = 'ppk'
+    console.log(arr)
+  </script>
+</body>
+</html>

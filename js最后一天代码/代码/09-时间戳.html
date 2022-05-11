@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 时间戳 - 毫秒数
+    var now = new Date()
+
+    // 获取时间戳的方式
+    console.log(now.valueOf()) // 获取时间戳的标准写法
+    // 1651803397610 表示当前时间距离1970年1月1日的经过毫秒数
+    console.log(now.getTime())
+    console.log(+now) // 隐式讲new Date()转换成时间戳，但是不具有语义，很难进行阅读理解，不建议使用
+
+    console.log(Date.now()) // html5 提供的新方法，有兼容问题（ie） (不建议使用)
+
+    // 写出当前时间至2022年5月6日12点的时间段
+    // 1. 获取当前时间和5/6日的时间戳
+    var date = new Date().valueOf()
+    var date_5612 = new Date('2022-5-7 12:00:00').valueOf()
+    console.log(date, date_5612)
+    // 2. 讲两个数相减就可以获取时间段
+    var sum = date_5612 - date // 毫秒数
+    // console.log(sum)
+    // 3. 将时间戳变成秒
+    var times = sum / 1000
+    console.log(times)
+
+    // 3.1 获取这个变成秒的时间段中有多少天
+    var day = Math.floor(times / 60 / 60 / 24)
+    console.log(day, 'day')
+    // 4. 获取这个变成秒的时间段中有多少小时
+    var h = Math.floor(times / 60 / 60 % 24) // 小时
+    console.log(h, 'h')
+    // 5. 获取这个变成秒的时间段中除去小时后的分钟数
+    var m = Math.floor(times / 60 % 60) // 分钟
+    console.log(m, 'm')
+    // 6. 获取这个变成秒的时间段中除去小时除去分钟的秒数
+    var s = Math.floor(times % 60)
+    console.log(s, 's')
+    console.log(`${day}天 ${h}:${m}:${s}`)
+  </script>
+</body>
+</html>

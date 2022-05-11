@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 将原始数组中的每一项反过来放到新数组中
+    var arr = ['red', 'green', 'blue', 'pink', 'purple', 'hotpink']
+
+
+    var newArr = []
+    // var i = arr.length - 1 => 让遍历的初始变量为原数组中的最后一个索引
+    for (var i = arr.length - 1; i >= 0; i--) {
+      // arr[5] => hotpink  => newArr.push  => newArr = ['hotpink']
+      // arr[4]
+      newArr.push(arr[i])
+    }
+
+    console.log(newArr)
+
+    var newArr1 = arr.reverse() // 翻转操作
+    var newArr2 = arr.reverse()
+    console.log(newArr1)
+  </script>
+</body>
+</html>

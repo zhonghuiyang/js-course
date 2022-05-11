@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 变量声明提升，只提升变量的声明时间（在代码执行前，把所有var的变量全部声明到代码的最顶端），不进行赋值操作
+    console.log(num) // undefined
+    var num = 10
+
+    /*
+      1. 变量声明提升
+      var num
+      console.log(num)
+      var num = 10
+    */
+
+    // 函数声明提升
+    // 建议： 讲调用函数写在声明该函数的后面
+    fn()
+    function fn () {
+      console.log('函数申明提升')
+    }
+
+    /*
+      function fn () {
+        console.log('函数申明提升')
+      }
+      fn()
+    */
+
+    // 特殊：匿名函数
+    fun()
+    var fun = function () {}
+
+    /*
+      var fun // undefined
+      fun() // undefined() => 报错
+      var fun = function () {}
+    */
+  </script>
+</body>
+</html>

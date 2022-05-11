@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var yhl = {
+      name: '严海伦',
+      age: 58,
+      sex: 'man'
+    }
+
+    var lhz = {
+      name: '练后健',
+      age: 18,
+      sex: 'man'
+    }
+
+    var zxy = {
+      name: '周星月',
+      age: 'undefined',
+      sex: 'woman'
+    }
+
+    // 定义构造函数的语法
+    function f1 () {}
+    var f11 = f1() // undefined
+    console.log(f1) // undefined
+    
+    function Person (myName, myAge, mySex) {
+      // this 这个， 表示的是创建了这个对象
+      // 在构造函数里面，如果希望用到当前创建出来的对象中的属性时， 一定要加this
+      this.name = myName
+      this.age = myAge
+      this.sex = mySex
+      this.sayHi = function () {
+        console.log(`姓名：${this.name}，年龄${this.age}，性别${this.sex}`)
+        // console.log(`姓名：${name}，年龄${age}，性别${sex}`)
+      }
+    }
+
+    // 通过构造函数创建对象
+    // 通过new创建对象后，需要在（）里面填入对应形参的实参
+    var yhl1 = new Person('严海伦', 58, 'man')
+    // console.log(yhl, '字面量创建')
+    // console.log(yhl1, '构造函数创建')
+    console.log(yhl1.name)
+    yhl1.sayHi()
+  </script>
+</body>
+</html>

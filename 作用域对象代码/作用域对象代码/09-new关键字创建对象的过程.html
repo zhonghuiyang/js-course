@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Star (myName, myAge, mySex) {
+      // 1. 在构造函数代码执行前，隐式的声明一个this = new Object()
+      // var this = new Object()
+      // 2. 执行构造函数内部代码，将各个属性赋值到this对象中
+      this.name = myName
+      this.age = myAge
+      this.sex = mySex
+      // 3. return this 隐式返回了新构建的this对象
+    }
+
+    var ldh = new Star('刘德华', 60, '男')
+
+    for (var i = 0; i < arr.length; i++) {
+
+    }
+  </script>
+</body>
+</html>

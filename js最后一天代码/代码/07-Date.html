@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. new Date() 实例化
+    // 获取当前时间
+    var now = new Date()
+    console.log(now)
+    // 2. 获取特定时间的实例化时间对象
+    var time = new Date('2022-05-01 6:0:0')
+    // Sun May 01 2022 06:00:00 GMT+0800 (香港标准时间)
+    console.log(time)
+    var time2 = new Date(2022, 5, 1)
+    // Wed Jun 01 2022 00:00:00 GMT+0800 (香港标准时间)
+    // 通过数字型创建的实例化时间对象中， 月份是冲0开始计数，0~11 => 1月~12月
+    console.log(time2)
+
+    // Date() 内置构造函数可以不用new来创建
+    // 不适用new来调用Date()的返回值是一个字符串
+    // 注意：以后实际开发中千万不要忘记加new
+    var now2 = Date()
+    console.log(now2, 'Date()')
+    console.log(typeof now)
+    console.log(typeof now2)
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function getSum (num1, num2, num3) { // 形式参数
+
+    }
+
+    // getSum(1, 2, 3) // 实际参数
+
+    // 做蛋糕
+    // 蛋糕模具： 鸡蛋，面粉，黄油 => getSum (num1, num2, num3)
+
+    // 真实制作的时候，向模具中倒入 2个鸡蛋， 400g面粉， 200g黄油 => getSum(2, 400, 200)
+
+    // 1~N 个数字的累加和
+    function getSum (num) {
+      // 函数执行代码
+      var sum = 0
+      for (var i = 1; i <= num; i++) {
+        sum += i
+      }
+      console.log(sum)
+    }
+    // 1-50的累加和
+    getSum(50)
+    // 1-200的累加和
+    getSum(200)
+
+    // n-m个数字的累加和 10-50
+    function getSum2 (start, end) {
+      // 函数执行代码
+      var sum = 0
+      for (var i = start; i <= end; i++) {
+        sum += i
+      }
+      console.log(sum)
+    }
+
+    // 10-50
+    getSum2(10, 50)
+    // 100-200
+    getSum2(100, 200)
+  </script>
+</body>
+</html>

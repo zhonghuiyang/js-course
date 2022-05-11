@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    console.log(Math.max(-1, -10)) // -1
+    console.log(Math.max(1, 99, 3)) // 99
+    // 里面放了一个不能转换成数字类型的字符时
+    console.log(Math.max(1, 99, '张三')) // NaN
+    // 如果Math.max() 括号里没有参数
+    console.log(Math.max()) // -Infinity 无穷小
+    console.log(Math.min(1, 2)) // 1
+    console.log(Math.min(1, 99, '张三')) // NaN
+    console.log(Math.min()) // Infinity 无穷大
+
+    /*
+      1. 数字比较最值，输出就是最大或最小
+      2. 如果有值无法转换成数字， 直接返回NaN
+      3. 最大里面没有值，直接返回 无穷小
+      4. 最小里面没有值，直接返回 无穷大
+    */
+  </script>
+</body>
+
+</html>

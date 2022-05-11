@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    console.log(Math.PI)
+    // random() 方法的小括号中，不需要接受任何实参
+    console.log(Math.random())
+
+    // 能否做一个点名系统，60位同学随机点名
+    // 1. 创建一个变量，接受随机数[0, 1)
+    var random = Math.random()
+    // 2. 讲随机数的区间由[0, 1) => [0, 60)
+    var random_60 = random * 60
+    // 3. 将浮动随机数转换成整数 （向上取整）
+    var random_60_ceil = Math.ceil(random_60)
+    console.log(random_60_ceil)
+
+    function myRandom() {
+      // 1. 创建一个变量，接受随机数[0, 1)
+      var random = Math.random()
+      // 2. 讲随机数的区间由[0, 1) => [0, 60)
+      var random_60 = random * 60
+      // 3. 将浮动随机数转换成整数 （向上取整）
+      var random_60_ceil = Math.ceil(random_60)
+
+      return random_60_ceil
+    }
+
+    alert(myRandom())
+  </script>
+</body>
+
+</html>

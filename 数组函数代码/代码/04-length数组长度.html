@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr = ['AK-12','AN-94','AK-15','RPK-16']
+    console.log(arr.length)
+    arr.length = 5
+    console.log(arr)
+
+    // 直接通过长度去新建数组
+    var arr2 = new Array(3)
+
+    // 等同于
+    var arr3 = []
+    arr3.length = 3
+    console.log(arr2, arr3)
+
+    // 通过减少数组长度去删除元素
+    var arr4 = ['AK-12','AN-94','AK-15','RPK-16']
+    arr4.length = 2
+    console.log(arr4)
+  </script>
+</body>
+</html>

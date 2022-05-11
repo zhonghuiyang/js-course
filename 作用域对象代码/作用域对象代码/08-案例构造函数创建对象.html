@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Hero(name, blood, attack) { // 构造函数的参数，就是对象的属性
+      this.name = name
+      this.blood = blood
+      this.attack = attack
+      this.attackType = function (att) {
+        alert(this.name  + '的攻击方式：' + att) // 闪刀魔法
+      }
+    }
+    var raye = new Hero('零依', '1500', '1500')
+    console.log(raye.name)
+    raye.attackType('Sky Striker Mecha')
+  </script>
+</body>
+
+</html>

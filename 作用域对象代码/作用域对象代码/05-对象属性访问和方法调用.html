@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 类似于名片
+    var yhl = {
+      name: '严海伦', // 属性
+      age: 58, // 属性
+      sex: '男', // 属性
+      say: function () { // 对象中的方法，都是匿名函数
+        alert('帮大家找对象')
+      }
+    }
+
+    // 属性的调用
+    // 1. 点语法 对象.属性
+    console.log(yhl.name)
+    // 2. 中括号语法 对象['属性名']
+    // 注意：中括号中的属性名，一定要转化成字符串
+    console.log(yhl['age'])
+
+    // 方法的调用
+    // 1. 点语法 对象.方法名
+    yhl.say()
+    // 2. 中括号语法 对象['方法名']
+    yhl['say']()
+
+
+    // 变量
+    var myName = 'yhl'
+
+    // 属性
+    var obj = {
+      name: 'yhl'
+    }
+
+    // 函数（方法）
+    function say () {
+      console.log('hello world')
+    }
+
+    // 对象方法
+    var obj = {
+      say: function () {
+        console.log('say obj')
+      }
+    }
+  </script>
+</body>
+
+</html>

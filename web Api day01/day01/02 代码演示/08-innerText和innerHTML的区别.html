@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 修改div的内容 -->
+    <div></div>
+    <p>
+        我是文字
+        <span>123</span>
+    </p>
+    <script>
+    // innerText 和 innerHTML 的区别
+    // 1. innerText 不识别html标签, 去除空格和换行
+    // 2. innerHTML 识别html标签, 保留空格和换行
+
+    // 1. 设置元素内容
+    var div = document.querySelector('div')
+    // innerText 不识别html标签, 在设置元素内容的时候, 会把html标签当做字符串处理
+    // div.innerText = '<strong>123123</strong>  <br/> 我是innerText'
+
+    // innerHTML 识别html标签, 会直接转换为html标签
+    div.innerHTML = '<strong>123123</strong>  <br/> 我是innerText'
+
+    // 2. 从获取元素内容来看
+    // 因为innerText不识别html标签, 会先去掉所有的标签和换行
+    var p = document.querySelector('p')
+    // console.log(p.innerText) // 打印的时候,去掉了标签名
+
+    // innerHTML识别html标签, 所以html标签也会打印出来
+    console.log(p.innerHTML)
+
+
+
+    </script>
+</body>
+
+</html>

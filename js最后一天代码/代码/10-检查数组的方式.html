@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 检查变量的数据类型
+    var arr = []
+    console.log(typeof arr)
+
+    // instanceof 运算符 - 判断一个对象是否是某个构造函数的实例
+    // new Array() （内置）构造函数
+    // arr1 数组实例  obj  对象实例
+    var arr1 = new Array()
+    var obj = new Object()
+
+    // A实例 instanceof 构造函数 => 返回结果： A是否是构造函数的实例,Boolean
+    console.log(arr1 instanceof Array)
+    console.log(obj instanceof Array)
+    console.log(obj instanceof Object)
+    console.log(arr1 instanceof Object) // 数组也是Object构造函数的实例
+
+    // Array.isArray() // 判断一个对象（其他数据类型）是否是数组
+    console.log('------------------------')
+    var arr2 = []
+    console.log(Array.isArray(arr2))
+    console.log(Array.isArray(obj))
+
+    // 完美解决判断数据类型的方式
+    console.log(Object.prototype.toString.call(arr2))
+    console.log(Object.prototype.toString.call(obj))
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. 遍历对象
+    var obj = {
+      name: '张三',
+      age: 18,
+      sex: '男',
+      fn: function () {}
+    }
+
+    for (key in obj) {
+      // 隐式声明的这个key变量，在for循环中的每一次循环，表示的是obj中的某一个属性名
+      console.log(key) // name age sex fn
+      // for in循环体中，想过获得obj当前属性名的属性值时，只能使用[]中括号获取属性的形式
+      console.log(obj[key])
+    }
+
+    var arr = ['yhl', 'lhj', 'zxy']
+    for (var i = 0; i < arr.length; i++) {
+      console.log(arr[i], 'arr')
+    }
+
+    for (i in arr) {
+      // for in 循环数组时， 返回的key为索引号转化后的字符串
+      console.log(key, 'arr')
+      // 方括号里的值，可以做隐式转换
+      console.log(arr[i], 'arr')
+    }
+  </script>
+</body>
+
+</html>

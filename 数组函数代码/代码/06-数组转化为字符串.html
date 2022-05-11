@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr = ['red', 'green', 'blue', 'pink']
+    var str = ''
+    var sep = '|'
+    for (var i = 0; i < arr.length; i++) {
+      // str += arr[i] + sep // red + | => red|
+      // 为了最后一个元素不添加|
+      // 方法1， if else
+      // 当前索引号小于最后一个索引
+      if (i < arr.length - 1) {
+        str += arr[i] + sep
+      } else {
+        str += arr[i]
+      }
+    }
+
+    // 数组可以通过减少length的长度实现内部元素的删减，但是字符串string类型，不可以通过改变长度去进行删减
+    // 方法2：
+    var newStr = arr.join('|')
+
+    console.log(str)
+    console.log(newStr)
+  </script>
+</body>
+</html>

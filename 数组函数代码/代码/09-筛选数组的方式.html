@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 选出大于等于10的元素
+    // 2. 放入新的数组中
+    var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    var newArr = [] // length = 0
+    var j = 0 // 新声明一个变量，这个变量里的数值代表插入到newArr这个新数组中的索引号
+    for (var i = 0; i < arr.length; i++) {
+      // arr[i]
+      if (arr[i] >= 10) {
+        newArr[j] = arr[i]
+        j++ 
+      }
+      // arr[i] = 77  j = 0  -> newArr = [77]   j++ = 1
+      // arr[i] = 52  j = 1  -> newArr = [77, 52]   j++ = 2
+      // arr[i] = 25  j = 2  -> newArr = [77, 52, 25]
+    }
+
+    // 数组[数组.length] => 讲新的元素插入到数组的末尾
+    var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    var newArr = [] // length = 0
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] >= 10) { 
+        // newArr[newArr.length] = arr[i]
+        newArr.push(arr[i])
+      }
+
+      // 77  newArr[0] =>  newArr = [77]
+      // 52  newArr[1] =>  newArr = [77, 52]
+      // 25  newArr[2] =>  newArr = [77, 52, 25]
+    }
+
+
+    console.log(newArr)
+  </script>
+</body>
+</html>

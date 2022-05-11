@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <p class="item">1</p>
+    <p class="item">2</p>
+    <p class="item">3</p>
+    <p class="item">4</p>
+    <script>
+    
+    // H5 提供的新方法 , 获取元素
+
+    // 1. 根据类名, 获取元素集合, 返回对象也是一个伪数组.
+    // element.getElementsByClassName('类名')
+    // 注意: 不需要加 .  
+    var box = document.getElementsByClassName('box')
+    // console.log(box)
+
+    // 2. 通过选择器来获取元素 
+    // element.querySelector('')
+    // 如果是ID  #;  
+    // 如果 是 类名  .
+    // 如果是标签, 直接写
+    var nav = document.querySelector('#nav')
+    console.log(nav)
+
+    // 注意: querySelector 获取到的是第一个元素元素!
+    // 只获取到了第一个
+    var boxQuery = document.querySelector('.box')
+    // console.log(boxQuery)
+    var p = document.querySelector('p')
+    // console.log(p)
+
+    // 3. 获取到一堆元素集合  返回的对象 是 伪数组
+    // element.querySelectorAll('')
+    var boxs = document.querySelectorAll('.box')
+    console.log(boxs)
+    var ps = document.querySelectorAll('.item') // p 
+    console.log(ps)
+
+    // 4. id 为 nav 下的所有li标签
+    var nav = document.getElementById('nav')
+    var lis = nav.querySelectorAll('li')
+
+    // 传入选择器 我们可以直接获取 后代选择器
+    var lis = document.querySelectorAll('#nav li')
+    console.log(lis)
+
+    // 以后, 咱们推荐使用H5新增的方式来获取元素.
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

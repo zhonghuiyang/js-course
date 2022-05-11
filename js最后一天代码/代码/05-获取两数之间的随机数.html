@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 确定两数之间的范围 => max - min
+    // 2. 讲随机数Math.random的范围扩大到当前范围 [0, 1) => [0, max - min)
+    // 3. 将随机数整个加上最小值min [0,  max - min) => [min,  max)
+    function getRandom (min, max) {
+      return Math.random() * (max - min) + min
+    }
+
+    console.log(getRandom(1, 3))
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr = ['red', 'green', 'blue', 'pink']
+    arr[4] = 'yellow'
+    arr[0] = 'black'
+    console.log(arr)
+
+    // length: 特点length比最后一个元素的索引号大1
+    // 通过修改数组长度来达到末尾新增新的元素
+    var arr1 = [] // 索引为0 => length
+    console.log('arr1.length', arr1.length)
+    arr1[arr1.length] = '0'
+    arr1[arr1.length] = '1'
+
+    console.log(arr1)
+  </script>
+</body>
+</html>

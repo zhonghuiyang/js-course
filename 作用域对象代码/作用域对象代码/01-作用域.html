@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1 全局作用域
+    var num = 10
+    num2 = 100
+    // 2 局部作用域 - 函数作用域
+    function getSum (num3) {
+      var num = 20 // 在函数内部var 声明的变量
+      num++
+      num4 = 400 // 不声明只赋值的变量，会隐式的在全局作用域中自动声明
+      console.log(num, 'fun') // 21
+      console.log(num3, num4, num2)
+    }
+
+    getSum(200) // 调用getSum函数完成以后，将函数内部的所有内容销毁
+
+    getSum(200)
+    
+    console.log(num) // 10
+
+    
+    console.log(num2)
+    
+    // 打印函数内部的形式参数
+    // console.log(num3) // 既没声明也没赋值
+
+    // 在局部作用域下不声明只赋值的变量
+    console.log(num4) // 400 
+
+    // 3 块级作用域
+    // if (true) {}
+
+    // switch ('1') {
+    //   case '1':
+    //     break
+    // }
+
+    // for (var i=0; i<2; i++) {}
+
+    // while (false) {}
+  </script>
+</body>
+</html>

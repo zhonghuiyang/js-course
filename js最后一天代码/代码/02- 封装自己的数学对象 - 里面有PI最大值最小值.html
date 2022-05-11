@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var math = {
+      PI: '3.1415926',
+      getMax: function () {
+        // 1. 先把第一项数值保存到声明的最大变量中
+        // arguments 只读
+        var max = arguments[0]
+        for (var i = 1; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i]
+          }
+        }
+        // 2. 将解析后的max结果返回出去
+        return max
+      },
+
+      getMin: function () {
+        // 1. 把第一项保存到声明的最小变量中
+        var min = arguments[0]
+        for (var i = 1; i < arguments.length; i++) {
+          if (arguments[i] < min) {
+            min = arguments[i]
+          }
+        }
+
+        return min
+      }
+    }
+
+    // 调用
+    console.log(math.getMax(1, 2, 3, 4, 5))
+    console.log(math.getMin(1, 2, 3, 4, 5))
+    console.log(Math.PI)
+    console.log(math.PI)
+  </script>
+</body>
+</html>

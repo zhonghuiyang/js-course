@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+
+    </ul>
+    <ol id="ol">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+    <ol >
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+
+    <script>
+        // 语法：element.getElementsByTagName('标签名') 
+        // 作用：根据标签名获取元素对象
+        // 参数：标签名
+        // 返回值：元素对象集合（伪数组，数组元素是元素对象）
+
+        // 根据标签名, 获取所有选中的元素集合, 返回的是伪数组, 元素集合
+        // 伪数组, 长的像数组 : 有索引号, 有length. 但是没有数组的一些方法 pop, push.
+        var lis = document.getElementsByTagName('li')
+        // console.log(lis)
+        // 获取第一个元素 , 第二个元素? 
+        // console.log(lis[0])
+        // console.log(lis[1])
+
+        // 2. 如果要得到每一个li标签, 我们可以遍历
+        for (var i = 0; i < lis.length; i++) {
+            // console.log(lis[i])
+        }
+
+        // 3. 如果页面中某个标签 只有一个, 我们得到的也是一个伪数组
+        var ul = document.getElementsByTagName('ul')
+        // console.log(ul)
+        // 4. 如果页面中传入的元素, 不存在, 返回什么?  返回一个空的伪数组 []
+        var p = document.getElementsByTagName('p')
+        // console.log(p)
+
+        // 5. 需求 : 我想获取id为 ol 下的所有li标签 ?
+        // 5.1 先获取id为ol的元素
+        var ol = document.getElementById('ol')
+        // 5.2 获取ol下的获取li标签
+        var ol_lis = ol.getElementsByTagName('li')
+        // console.log(ol_lis)
+
+        // 获取到一个伪数组
+        var ols = document.getElementsByTagName('ol')
+        // 第一个ol下的li标签
+        var lis_first = ols[0].getElementsByTagName('li')
+        var lis_second = ols[1].getElementsByTagName('li')
+        console.log(lis_first)
+        console.log(lis_second)
+
+
+    </script>
+</body>
+
+</html>
